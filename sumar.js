@@ -30,28 +30,23 @@ function readLine() {
  */
 
 function simpleArraySum(ar) {
-    // Write your code here
-    // Validate array size (n)
     const n = ar.length;
-    if (n <= 0 || n > 1000) {
-        console.log("Invalid input for array size.");
-        return null; // 
+    if(n<1 || n>1000){
+        console.log("Invalid input for array size");
+        return null;
     }
-
-    // Validate array elements
-    for (let i = 0; i < n; i++) {
-        if (ar[i] <= 0 || ar[i] > 1000) {
-            console.log("Invalid input for array element at index " + i);
-            return null; // 
+    
+    for(let i = 0; i < n; i++){
+        if( ar[i]<1 || ar[i]>1000){
+            console.log("Invalid input for array element in index");
+            return null;
         }
     }
-
-    // Calculate sum of array elements
+    
     let sum = 0;
-    for (let i = 0; i < n; i++) {
+    for(let i = 0; i<n; i++){
         sum += ar[i];
     }
-
     return sum;
 
 }
