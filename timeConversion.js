@@ -3,7 +3,7 @@ function timeConversion(s) {
         //s= 'hello';
         s = '00' + s.substring(2);
     } else if (s[8] === 'P') {
-        var Conv = '';
+        let Conv = '';
         Conv = s[0] + s[1];
         Conv = parseInt(Conv);
         Conv += 12;

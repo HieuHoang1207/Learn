@@ -18,7 +18,7 @@ function miniMaxSum(arr) {
 }
 
 function main() {
-    let arr = [-4, 3, -9, 0, 4];
+    const arr = [-4, 3, -9, 0, 4];
     const result = miniMaxSum(arr);
     console.log(result);
 }
