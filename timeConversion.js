@@ -12,6 +12,7 @@ function timeConversion(s) {
         }
     s = s.slice(0, 8);
     const output = s;
+    
     return output;
 }
 
