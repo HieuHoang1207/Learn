@@ -1,23 +1,27 @@
 function twoArrays(k, A, B) {
     let result = 'YES';
-    for (let i = 0; i < A.length; i++) {
-        for (let j = 0; j < A.length; j++) {
-            if (A[j] > A[j + 1]) {
-                let conversion = A[j];
-                A[j] = A [j + 1];
-                A[j + 1] = conversion;
-            }
-        }
-    }
-    for (let i = 0; i < B.length; i++) {
-        for (let j = 0; j < B.length; j++) {
-            if (B[j] < B[j + 1]) {
-                let conversion = B[j];
-                B[j] = B [j + 1];
-                B[j + 1] = conversion;
-            }
-        }
-    }
+    // for (let i = 0; i < A.length; i++) {
+    //     for (let j = 0; j < A.length; j++) {
+    //         if (A[j] > A[j + 1]) {
+    //             let conversion = A[j];
+    //             A[j] = A[j + 1];
+    //             A[j + 1] = conversion;
+    //         }
+    //     }
+    // }
+    A.sort((a, b) => a - b);
+    console.log(A);
+    // for (let i = 0; i < B.length; i++) {
+    //     for (let j = 0; j < B.length; j++) {
+    //         if (B[j] < B[j + 1]) {
+    //             let conversion = B[j];
+    //             B[j] = B[j + 1];
+    //             B[j + 1] = conversion;
+    //         }
+    //     }
+    // }
+    B.sort((a, b) => b - a);
+    console.log(B);
     for (let i = 0; i < B.length; i++) {
         if (A[i] + B[i] < k) {
             result = 'NO';
